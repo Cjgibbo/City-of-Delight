@@ -341,7 +341,31 @@
     }
 
     /* ── RESPONSIVE ── */
+    .mobile-nav {
+      display: none;
+      background: var(--navy);
+      padding: 0.75rem 1.5rem;
+      border-bottom: 2px solid var(--gold);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .mobile-nav a {
+      font-family: "Crimson Pro", serif;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid rgba(201,152,42,0.3);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .mobile-nav a:hover { color: var(--gold-light); border-color: var(--gold); }
+
     @media (max-width: 680px) {
+      .mobile-nav { display: flex; }
       .hero-content { padding: 2rem 1.5rem; }
       nav { display: none; }
       .glen-inner { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -364,6 +388,16 @@
       <a href="#">Contact</a>
     </nav>
   </header>
+
+  <!-- MOBILE NAV -->
+  <div class=mobile-nav>
+    <a href=index.html>Home</a>
+    <a href=#>History</a>
+    <a href=#>City Info</a>
+    <a href=#>Ordinances</a>
+    <a href=directory.html>Business Directory</a>
+    <a href=#>Contact</a>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
